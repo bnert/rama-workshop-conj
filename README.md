@@ -33,4 +33,11 @@
 
 (foreign-append! user-depot (todo/->CreateUser "alice" "Alice Smith"))
 (foreign-select-one [(keypath "alice") (submap [:name :location :created-at-millis])] profiles)
+
+
+
+./rama deploy \
+  --action update \
+  --jar <path to uberjar> \
+  --module workshop.todo/TodoAppModule
 ```
